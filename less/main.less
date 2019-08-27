@@ -1,0 +1,129 @@
+/* Colors*/
+@white: #ffffff;
+@dark: #2f2f2f;
+@active-color: #ff424c;
+@gray: #767676;
+/* Basic settings */
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* Typography */
+.header {
+  background: @dark url("../img/bg/header-bg.png") center no-repeat;
+  background-size: cover;
+  color: @white;
+  padding-top: 5rem;
+  padding-bottom: 23rem;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    &__logo {
+        position: relative;
+        transition: all 0.3s ease;
+      a {
+        color: @white;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        font-size: 3.6rem;
+      }
+      &:after{
+          position: absolute;
+          content: "";
+          top: 0;
+          right: -10px;
+          display: block;
+          width: 7px;
+          height: 7px;
+          border-radius: 8px;
+          background-color: @white;
+      }
+      &:hover{
+        transform: scale(1.1);
+    }
+    }
+    &__nav {
+      flex-basis: 90%;
+    }
+  }
+  &-button {
+    border: none;
+    cursor: pointer;
+    color: @dark;
+    background-color: @white;
+    border-radius: 25px;
+    padding: 16px 27px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        transform: scale(1.1) translateY(0.2rem);
+    }
+  }
+  &-main {
+    padding-top: 10rem;
+    text-align: center;
+    &__name {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+    &__title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 5.8rem;
+    }
+  }
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  a {
+    color: @white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 3rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: @white;
+      transform: translateY(1rem) scale(0);
+      transition: all 0.2s;
+    }
+    &:hover {
+      text-decoration: none;
+      &::after {
+        transform: translateY(1rem) scale(1);
+      }
+    }
+  }
+}
